@@ -3,6 +3,7 @@ module.exports = function(keywords) {
 	function defaultCompare(text, sub_category) {
 		return text == sub_category;
 	}
+
 	function _match(str, cond) {
 		let compareFn = cond || defaultCompare;
 	
@@ -17,7 +18,10 @@ module.exports = function(keywords) {
 	}
 	
 	return {
-		match : _match
+		match : _match,
+		topGroups : function() {
+			return Object.keys(keywords);
+		}
 	};
 };
 

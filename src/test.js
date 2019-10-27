@@ -52,4 +52,11 @@ describe('test', function() {
 		assert.equal('Health', category_name);
 	});
 
+	it('topGroups', function () {
+		let top = categories.topGroups();
+		assert.equal('Health', top[0]);
+		assert.equal('Style', top[1]);
+	});
+
+	
 });
